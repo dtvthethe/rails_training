@@ -262,3 +262,8 @@ II > RAILS
     + check trong cookies
       ++ check xem local_cookie == DB_cookie ? login user
 
+============DEPLOY=================
+$ git push heroku
+$ heroku pg:reset DATABASE
+$ heroku run rails db:migrate
+$ heroku run rails db:seed
