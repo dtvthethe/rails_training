@@ -69,6 +69,17 @@ cross-site request forgery (CSRF) la gi
   end
 ????????????????????????
 
+==============APACHE MYSQL===============
+MYSQL:
+  service mysql start
+  service mysql stop
+  service mysql restart
+PHP:
+  sudo /opt/lampp/manager-linux-x64.run
+  sudo systemctl stop apache2.service
+
+===============================
+
  aaa ||= 222: neu aaa == nil thi gan = 222 con neu != nil thi ko gan
  
 ===============DEPLAY APP ON HEROKU====================
