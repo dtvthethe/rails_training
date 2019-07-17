@@ -1,0 +1,104 @@
+`Application Cable`:
+  - real-time
+  - duy tri ket noi den may server cho du ko co request/ response nao nhhung van duy tri ket noi den server/ client
+ApplicationCable < `Action Cable`:
+  - Nó cung cấp cả client-side JavaScript framework, và Ruby server-side framework
+
+
+ApplicationController:
+  - view: application
+  - ke thua: ActionApplication
+  -
+ActionApplication:
+  - la 1 cot loi cua request trong Rails
+  - dc tao boi 1 or nhieui actions
+  - no thuc thi cac actions sau do render ra 1 template hoac redirect den 1 route khac
+  - 1 action thi se define la phplic dc tu dong truy cap boi web-server thong qua Rails route
+
+Strong params:
+  - cho phep thay doi cac attibute da dc khai bao chi dinh trong permit, cho phep cạp nhap cac cac attr cu the cua Model
+  - cho phep ngan chan cac attribute cố tình thay đổi VD role
+  VD: params.require(:course).permit :name, :description
+  - Active Model
+
+Filter:
+  la cac methods chayj "before" "around" "after"
+
+Tra ve JS:
+  1/ render js: "alert(0)"
+  2/ protect_from_forgery except: :index
+
+Scope vs Method:
+  - luon luon tra ve relation cho du la ko dc thuc thi
+  - scope: cho phép bạn chỉ định các truy vấn thường được sử dụng, nó cũng gần giống như class method, chỉ khác lúc pass params nil hoặc ""
+
+Flash:
+  - dung de truyen messsage
+  - se dc hien thi va bi mat di khi chayj den action tiep theo
+
+ActiveRecord:
+  - Query Interface:
+    + ko quan tam den DB la gi, chi su dung truy van thong qua query interface
+    + cac kys thuat nang cao nhu:
+      . lazyloading + eagger loading
+      . includes vs joins method: nghien cuc khi nao thi dung include khi nao thji dung joins de toi uu cau truy van
+      . scope
+      . Find or build new object: nó cho phép bạn tìm kiếm record hoặc tạo mới nếu nó chưa tồn tại
+      . find by sql:nếu bạn muốn dùng câu SQL của chính bạn đã biết, các bạn có thể sử dụng method find_by_sql example
+  - Associations:
+    + belongs_to
+    + has_one
+    + has_many
+    + has_many :through
+  - Validations: Validations được sử dụng trong Actice Record với mục đích để chắc chắn rằng chỉ những dữ liệu hợp lệ mới được lưu vào database, Validations giúp chúng ta khởi tạo các điều kiện ràng buộc cho dữ liệu sẽ được lưu trữ lieu
+      + presence: yêu cầu attributes không được empty (nil hoặc "", " ")
+      + length: yêu cầu độ dài giá trị của attributes. (maximum, minimum)
+      + uniqueness: yêu cầu giá trị của attributes phải là duy nhất
+      + format: yêu cầu giá trị của attributes phải match với một biểu thức chính quy Regular Expression
+  - Callbacks:
+    + The Object Life Cycle trong Rails object sẽ trải qua các giai đoạn created, updated và destroyed. Active Record cung cấp các phương thức để chúng ta hooks được vào object life cycle để thực hiện một số công việc mà chúng ta mong muốn. Các phương thức ấy được gọi là Callbacks
+    + Callbacks là những method được gọi vào các khoảnh khắc nhất định trong object's life cycle.
+      . before_validation
+      . after_validation
+      . before_save
+      . after_save
+      . around_save
+      . before_create
+      . after_create
+      . around_create
+      . before_update
+      . after_update
+      . before_destroy
+      . after_destroy
+      . after_commit/after_rollback
+
+      thứ tự: Create -> Update -> Détroy
+
+  - Migration:
+    +  Migrations là một đặc trưng của ActiveRecord cho phép bạn chỉnh sửa cấu trúc của Database theo thời gian, thay vì phải thay đổi Database bằng những câu lệnh SQL cũ, migrations cho phép bạn sử dụng một cách dễ dàng cú pháp Ruby DSL(domain specific language) để mô tả việc thay đổi DB
+      . create_table
+      . change_table
+      . change_column
+      . add_column
+      . remove_column
+      . add_foreign_key
+      . remove_foreign_key
+      . add_foreign_key
+      . remove_foreign_key
+      . add_index
+      . remove_index
+  - Nested attribute:
+    + nested attributes cho phép các đối tượng con có thể được tạo, cập nhật đồng thời với đối tượng cha
+    + accepts_nested_attributes_for
+View:
+  - ERB) là một tính năng của Ruby cho phép bạn nhúng code Ruby vào một trang HTML thông qua các thẻ của nó
+    + <% %>: thực thi Ruby code mà không trả về bất cứ giá trị nào: if else, loop each for while
+    + <%= %>: chèn một giá trị xuất ra trên View
+Enum:
+  la 1 kieu du lieu, la 1 tap hop bao gom cac key va value da dc thiet san, VD: status cua 1 khoa hoc(init, stated, finish)
+?????
+%i(edit update destroy show) => [:edit, :update, :destroy, :show]
+%w(edit update destroy show) => ["edit", "update", "destroy", "show"]
+
+
+
