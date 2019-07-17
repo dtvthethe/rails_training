@@ -134,6 +134,9 @@ Khac biet String va Symbol
         1299228
         1299228
 
+Skip validate: 2 cach
+  1/ su dung cac ham bo qua validate
+  2/ config ham save nhu sau: obj.save(validate: false)
 
 
 
