@@ -113,6 +113,26 @@ ActiveRecord status:
   4.destroyed
     item.destroy
     item.destroyed? #=> true
+    
+Khac biet String va Symbol
+    %i() => array symbol
+    %w()=> ban chat laf array string
+    symbol se nhanh hon array string
+    khac biet giua symbol va string la ko the thay doi ten cua symbol VD: sym[0] = "A" => Error, str[0] = "A" ok
+    String:
+        5.times{|x| s = "hello"; puts s.object_id}
+        15528420
+        15528300
+        15528240
+        15528180
+        15528120
+    Symbol:
+        5.times{|x| s = :hello; puts s.object_id}
+        1299228
+        1299228
+        1299228
+        1299228
+        1299228
 
 
 ?????
