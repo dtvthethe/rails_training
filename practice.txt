@@ -96,9 +96,31 @@ View:
     + <%= %>: chèn một giá trị xuất ra trên View
 Enum:
   la 1 kieu du lieu, la 1 tap hop bao gom cac key va value da dc thiet san, VD: status cua 1 khoa hoc(init, stated, finish)
+
+ActiveRecord status:
+  1.new record
+     item = Item.new
+     item.new_record? #=> true
+
+  2.persisted
+    item.save
+    item.persisted? #=> true
+
+  3.changed
+    item.name = "other"
+    item.changed? #=> true
+
+  4.destroyed
+    item.destroy
+    item.destroyed? #=> true
+
+
 ?????
 %i(edit update destroy show) => [:edit, :update, :destroy, :show]
 %w(edit update destroy show) => ["edit", "update", "destroy", "show"]
+
+
+
 
 
 
