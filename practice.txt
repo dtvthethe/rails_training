@@ -135,11 +135,6 @@ Khac biet String va Symbol
         1299228
 
 
-?????
-%i(edit update destroy show) => [:edit, :update, :destroy, :show]
-%w(edit update destroy show) => ["edit", "update", "destroy", "show"]
-
-
 
 
 
